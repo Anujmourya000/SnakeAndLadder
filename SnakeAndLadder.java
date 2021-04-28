@@ -6,12 +6,12 @@ public class SnakeAndLadder {
 		
 		int dicepos=0;
 		
-		int count=0;
-		
+			
 		for( dicepos=1; dicepos<100; dicepos++) {
 		
 		int dice = (int) Math.floor(Math.random() * 10) % 7;
-
+		
+		
 		switch (dice) {
 		
 		case 1:
@@ -32,7 +32,7 @@ public class SnakeAndLadder {
 			System.out.println("Ladder");
 			dicepos = dicepos + dice;
 			System.out.println("dice position:"+dicepos);
-		    
+			
 			break;
 		    
 		case 4:
@@ -46,34 +46,31 @@ public class SnakeAndLadder {
 			System.out.println("Snake");
 			dicepos = dicepos - dice;
 			System.out.println("dice position:"+dicepos);
-			
+				
 			break;
 			
 		case 6:
 			System.out.println("Snake");
-			dicepos = dicepos - dice;
+			dicepos = dicepos - dice;	
 			System.out.println("dice position:"+dicepos);
-			
+				
 			break;
 			
 		default:
 			System.out.println("No Moves");
 			dicepos = dicepos;
-			System.out.println("dice position:"+dicepos);
+			//System.out.println("dice position:"+dicepos);
 			
 			break;
 		}
 		
-		//dicepos = dicepos+dice;
-		if(dicepos > 100) {
-			dicepos = 100-dicepos;
-			System.out.println("dice position:"+dicepos);
 		}
 		
-		count++;
-		
+		if(dicepos == 100) {
+			System.out.println("player won & dice position:"+dicepos);
+			
 		}
-		System.out.println("No. of times the die rolled = "+count);
+		
 	}
 	
 
